@@ -1,0 +1,23 @@
+SET DATABASE SQL SYNTAX MSS TRUE
+
+CREATE SCHEMA dbo AUTHORIZATION DBA;
+
+
+CREATE TABLE IF NOT EXISTS  dbo.reference_DATA
+    (
+    
+    
+    	SUBJECT_ID	        VARCHAR(250),			
+		GAI_ADOPTION_DT	    DATE,	
+		IN_SERVICE_DT	    DATE,	
+		OUT_OF_SERVICE_DT	DATE,	
+		LIST_NM	            VARCHAR(250),			
+		CONTEXT_NM	        VARCHAR(250),			
+		ITEM_CD	            VARCHAR(250),			
+		SHORT_DESC	        VARCHAR(250),			
+		LONG_DESC	        VARCHAR(250),			
+		NOTES_TXT	        VARCHAR(250)			
+	);
+
+	
+	

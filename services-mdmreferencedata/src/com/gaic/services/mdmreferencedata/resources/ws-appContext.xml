@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+	xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	     http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+         http://jax-ws.dev.java.net/spring/core
+    	 http://jax-ws.dev.java.net/spring/core.xsd
+    	 http://jax-ws.dev.java.net/spring/servlet
+    	 http://jax-ws.dev.java.net/spring/servlet.xsd
+    	 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd"> 
+<!--     	 
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:soap="http://cxf.apache.org/bindings/soap"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	                http://www.springframework.org/schema/beans/spring-beans.xsd
+    	http://cxf.apache.org/bindings/soap 
+    	http://cxf.apache.org/schemas/configuration/soap.xsd
+    	http://cxf.apache.org/jaxws 
+    	http://cxf.apache.org/schemas/jaxws.xsd
+    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+ -->
+   <import resource="classpath:/com/gaic/services/core/resources/services-aopContext.xml"/> 
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<tx:annotation-driven proxy-target-class="true" />
+	
+	<!-- URL Bindings-->
+	<bean id="binding" class="com.sun.xml.ws.transport.http.servlet.SpringBinding">
+		<property name="url" value="/soap" />
+		<property name="service">
+			<bean class="org.jvnet.jax_ws_commons.spring.SpringService">
+				<property name="bean" ref="iMdmReferenceDataService" />
+				<property name="impl" value="com.gaic.services.mdmreferencedata.MdmReferenceDataService" />
+			</bean>
+		</property>
+	</bean> 
+	
+	<!-- 
+	<jaxws:endpoint id="MdmReferenceDataService"
+		implementor="com.gaic.services.mdmreferencedata.MdmReferenceDataService" address="/soap" />
+     -->
+		
+</beans>

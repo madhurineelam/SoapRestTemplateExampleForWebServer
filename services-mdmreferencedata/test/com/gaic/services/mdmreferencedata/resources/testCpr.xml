@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!--
+		CprLocal uses a custom 'OptionalPropertiesConfiguration' that silently
+		fails if nothing is loaded.
+	-->
+	<bean id="optionalCprLocalConfiguration"
+		class="com.gaic.services.configuration.properties.OptionalPropertiesConfiguration">
+		<constructor-arg value="./test/com/gaic/services/mdmreferencedata/resources/CprLocal.properties" />
+	</bean>
+	
+	
+	<bean id="commonCprConfiguration" class="com.gaic.services.configuration.RefreshableCompositeConfiguration">
+		<constructor-arg>
+			<list>
+				<!-- Order matters! the list is processed from bottom up -->
+				<ref bean="optionalCprLocalConfiguration" />
+				<ref bean="cprConfiguration" /> 
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>

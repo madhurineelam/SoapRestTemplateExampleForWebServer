@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.gaic.services</groupId>
+		<artifactId>parent</artifactId>
+		<version>2.0.28</version>
+	</parent>
+	
+	<properties>
+		<service-endpoint-interface>com.gaic.services.mdmreferencedata.MdmReferenceDataService</service-endpoint-interface>
+		<springContextList>classpath:com/gaic/services/core/resources/services-coreContext.xml,
+			classpath:com/gaic/services/configuration/resources/services-cprContext.xml,
+			classpath:com/gaic/services/mdmreferencedata/resources/appContext.xml,
+            classpath:com/gaic/services/mdmreferencedata/resources/db-appContext.xml,
+			classpath:com/gaic/services/mdmreferencedata/resources/ws-appContext.xml</springContextList>
+		<log4jConfigLocation>classpath:com/gaic/services/mdmreferencedata/resources/log4j.xml</log4jConfigLocation>
+		<skipTests>false</skipTests>
+	</properties>
+
+	<artifactId>services-mdmreferencedata</artifactId>
+	<name>MdmReferenceDataService</name>
+	<groupId>com.gaic.services</groupId>
+	<packaging>war</packaging>
+	<version>1.0.1-SNAPSHOT</version>
+
+	<scm>
+		<url>https://github.gaig.com/CORESRVCS/services-mdmreferencedata</url>
+		<connection>scm:git:ssh://git@cvgapgithub01/CORESRVCS/services-mdmreferencedata.git</connection>
+        <developerConnection>scm:git:ssh://git@cvgapgithub01/CORESRVCS/services-mdmreferencedata.git</developerConnection>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>${skipTests}</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warName>${service-full-name}</warName>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	 <dependencies>
+    
+    	<dependency>
+			<groupId>com.gaic.services</groupId>
+			<artifactId>services-core</artifactId>
+		</dependency>
+
+    	 <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency> 
+		
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<scope>test</scope>
+		</dependency>
+        <dependency>    
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>test</scope>
+       	 </dependency>
+       	<dependency> 
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<scope>test</scope>
+		 </dependency>
+		<dependency>
+		    <groupId>org.hsqldb</groupId>
+		    <artifactId>hsqldb</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>services-test</groupId>
+			<artifactId>services-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- To use Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- mockito unit test mocking framework -->
+		<dependency>
+      		<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<scope>test</scope>
+      	</dependency>
+		<!-- Support for testing Spring applications with JUnit tool -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		
+		<!-- To load JDBC driver class  -->
+		<dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>1.2.4</version>  
+        </dependency> 
+		
+		<!-- Commons Database Connection Pooling -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+
+		<dependency>
+    		<groupId>org.codehaus.jackson</groupId>
+    		<artifactId>jackson-core-asl</artifactId>
+    		<version>1.9.12</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>com.fasterxml.jackson.core</groupId>
+		  <artifactId>jackson-core</artifactId>
+		  <version>2.1.2</version>
+		</dependency>
+		<dependency>
+		  <groupId>com.fasterxml.jackson.core</groupId>
+		  <artifactId>jackson-databind</artifactId>
+		  <version>2.1.2</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.codehaus.jackson</groupId>
+		  <artifactId>jackson-mapper-asl</artifactId>
+		  <version>1.9.13</version>
+		</dependency>
+	<dependency>
+    	<groupId>org.apache.httpcomponents</groupId>
+    	<artifactId>httpclient</artifactId>
+    	<version>4.3.6</version>
+	</dependency>
+
+	</dependencies>
+		
+    <!-- If using oracle, uncomment this block
+    <dependencies>
+        <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>${version.oracle}</version>
+        </dependency>
+    </dependencies>
+    -->
+    
+    <!-- If using hibernate, uncomment this block  
+    Need to include hibernate specific dependencies
+	-->
+<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    
+</project>

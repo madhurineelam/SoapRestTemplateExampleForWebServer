@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<dataset>
+
+<table name="reference_DATA">
+		<column>SUBJECT_ID</column>
+		<column>GAI_ADOPTION_DT</column>
+		<column>IN_SERVICE_DT</column>
+		<column>OUT_OF_SERVICE_DT</column>
+		<column>LIST_NM</column>
+		<column>CONTEXT_NM</column>
+		<column>ITEM_CD</column>
+		<column>SHORT_DESC</column>
+		<column>LONG_DESC</column>
+		<column>NOTES_TXT</column>
+	<row>
+		<value><![CDATA[1-1000148]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[MVRREPORT]]></value>
+		<value><![CDATA[Motor Vehicle Reports (MVR)]]></value>
+		<value><![CDATA[Motor Vehicle Reports (MVR)]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+
+	<row>
+		<value><![CDATA[1-1000149]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[COMPSGAPP]]></value>
+		<value><![CDATA[Complete & Signed Application]]></value>
+		<value><![CDATA[Complete & Signed Application]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000150]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[ISOLCR]]></value>
+		<value><![CDATA[ISO Loss Cost Reports]]></value>
+		<value><![CDATA[ISO Loss Cost Reports]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000151]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[ITVREPORT]]></value>
+		<value><![CDATA[Insurance to Value (ITV) report]]></value>
+		<value><![CDATA[Insurance to Value (ITV) report]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000152]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[LPREPORT]]></value>
+		<value><![CDATA[Loss Prevention (LP) Report]]></value>
+		<value><![CDATA[Loss Prevention (LP) Report]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000153]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[LOSSPRVNTV]]></value>
+		<value><![CDATA[Loss Prevention Visit]]></value>
+		<value><![CDATA[Loss Prevention Visit]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000154]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[BDEHAAN]]></value>
+		<value><![CDATA[Brief Description & Hazard Analysis]]></value>
+		<value><![CDATA[Brief Description & Hazard Analysis]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000155]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[LOSSACR]]></value>
+		<value><![CDATA[Loss Analysis & Claims Review]]></value>
+		<value><![CDATA[Loss Analysis & Claims Review]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+
+
+	<row>
+		<value><![CDATA[1-1000156]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[List Test External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[BDEHAAN]]></value>
+		<value><![CDATA[lt Brief Description & Hazard Analysis]]></value>
+		<value><![CDATA[lt Brief Description & Hazard Analysis]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+	<row>
+		<value><![CDATA[1-1000157]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[List Test External Report Category]]></value>
+		<value><![CDATA[ENT]]></value>
+		<value><![CDATA[LOSSACR]]></value>
+		<value><![CDATA[lt Loss Analysis & Claims Review]]></value>
+		<value><![CDATA[lt Loss Analysis & Claims Review]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+
+	<row>
+		<value><![CDATA[1-1000157]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2015-01-01 00:00:00.0]]></value>
+		<value><![CDATA[2099-12-31 00:00:00.0]]></value>
+		<value><![CDATA[List Test1 External Report Category]]></value>
+		<value><![CDATA[MASTER]]></value>
+		<value><![CDATA[LOSSACR]]></value>
+		<value><![CDATA[lt Loss Analysis & Claims Review]]></value>
+		<value><![CDATA[lt Loss Analysis & Claims Review]]></value>
+		<value><![CDATA[Jira item RA-22190]]></value>
+	</row>
+
+</table>
+</dataset>
+
+
+

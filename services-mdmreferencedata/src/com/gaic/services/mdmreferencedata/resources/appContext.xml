@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="iMdmReferenceDataService" class="org.springframework.aop.framework.ProxyFactoryBean"> 
+	    <property name="target">
+	        <bean class="com.gaic.services.mdmreferencedata.MdmReferenceDataService">
+	        </bean>
+	    </property>
+	    <property name="proxyTargetClass" value="true" />
+	</bean>
+
+	<bean id="iMdmReferenceDataBl" class="com.gaic.services.mdmreferencedata.bl.MdmReferenceDataBl" >
+	</bean>
+
+
+	<bean id="iMdmReferenceDataValidation" class="com.gaic.services.mdmreferencedata.bl.validation.MdmReferenceDataValidation" >
+	</bean>
+
+
+	<bean id="iMdmReferenceDataDao" class="com.gaic.services.mdmreferencedata.dao.MdmReferenceDataDao">
+        <constructor-arg name="dataSource" ref="dataSource" /> 
+	</bean>
+
+	<bean id="buildSqlStatements" class="com.gaic.services.mdmreferencedata.dao.BuildSqlStatements">
+	</bean>
+	
+	<bean id="mdmReferenceDataDefaultValues" class="com.gaic.services.mdmreferencedata.bl.defaultvalues.MdmReferenceDataDefaultValues">
+	</bean>
+
+
+    <!-- CPR -->
+    <bean id="propPlaceholderConfigurer" parent="cprPropertyPlaceholderConfigurer">
+        <property name="placeholderPrefix" value="$MdmReferenceData{" />
+        <property name="namespace" value="com.gaic.services.mdm" />
+    </bean>
+</beans>
+
+
+ 
